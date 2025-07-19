@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./HealthHub.css">
+</head>
+<style>
+    * {
+        font-family: Poppins, sans-serif;
+    }
+
+    .footer {
+        margin-top: 20px;
+    }
+
+    .hello {
+        background: url(https://www.quickobook.com/assets/img/breadcumb-background.jpg);
+        background-size: cover;
+
+        height: 318px;
+    }
+
+    .ra {
+        padding-left: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: center;
+    }
+
+    .raa {
+        padding-top: 108px;
+    }
+
+    .ra1 {
+        color: #171C26;
+        font-size: 47px;
+        font-weight: 700;
+        line-height: 56px;
+        letter-spacing: 0.9px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ra2 {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 26px;
+        color: #7093E5;
+        letter-spacing: 0.9px;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .r2 {
+        text-decoration: none;
+        color: #969696;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.9px;
+        line-height: 23px;
+    }
+
+    #r3 {
+        font-size: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .r4 {
+        color: #3D73F2;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+    }
+
+    .raka {
+        border: none;
+        height: 1px;
+        background-color: #E6E6E6;
+    }
+
+    .n1 {
+        font-size: 30px;
+        font-weight: 550;
+        line-height: 36px;
+        letter-spacing: 1px;
+        margin-top: 25px;
+        /* width: 11; */
+    }
+
+    .n2 {
+        color: #272B41;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 1px;
+        padding-top: 10px;
+
+
+    }
+
+    .n3 {
+        width: 650px;
+        height: 40px;
+        padding: 7px 15px;
+        margin-top: 8px;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 23px;
+        font-weight: 350;
+        letter-spacing: 0.5px;
+        border: 1px #DCDCDC solid;
+        border-radius: 4px;
+        color: #333333;
+        background-color: #EAECEF;
+    }
+
+    .nn {
+        align-items: center;
+        /* background-color: #9fa1a4; */
+        text-align: start;
+        margin-left: 9%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .nnn {
+        padding-left: 15px;
+    }
+
+    #nnn2 {
+        margin-top: 10px;
+    }
+
+    .n4 {
+        color: #272B41;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 1px;
+        padding-top: 20px;
+    }
+
+    .n5 {
+        width: 650px;
+        height: 40px;
+        margin-top: 8px;
+        font-size: 15px;
+        padding-left: 15px;
+        letter-spacing: 0.5px;
+        border: 1px #DCDCDC solid;
+        border-radius: 4px;
+    }
+    .n6 {
+        color: #272B41;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 1px;
+        padding-left: 10px;
+    }
+
+    .nnnn {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .bol {
+        width: 100%;
+        height: 45px;
+    }
+
+    .bol {
+        border-radius: 5px;
+        margin-top: 10px;
+        font-family: Poppins, sans-serif;
+        font-size: 17px;
+        width: 150px;
+        font-family: 500;
+        letter-spacing: 0.5px;
+        background-color: #027BFF;
+        color: #FFFFFF;
+        border: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 20px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .bol:hover {
+        background-color: #FFFFFF;
+        color: #017BFE;
+        border: 1px #017BFE solid;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .avu {
+        margin-top: 50px;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        .hello {
+            height: 150px;
+        }
+
+        .n1 {
+            font-size: 22px;
+            line-height: 26px;
+            font-weight: 600;
+            color: #30ACFF;
+        }
+
+        .raa {
+            padding-top: 0px;
+            padding: 35px 20px;
+        }
+
+        .ra1 {
+            font-size: 35px;
+            line-height: 42px;
+        }
+
+        .ra2 {
+            font-size: 13px;
+            line-height: 20px;
+            margin-top: 10px;
+        }
+
+        .nn {
+            padding: 25px;
+            margin-top: 30px;
+            margin-left: 15px;
+            margin-right: 15px;
+            box-shadow: 0 0 8px 8px #F2F2F2;
+        }
+
+        #yx {
+            margin-top: 20px;
+        }
+
+        .n3 {
+            width: 93%;
+            margin-right: 50px;
+        }
+
+        .n5 {
+
+            width: 93%;
+        }
+
+        .footer {
+            display: none;
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 767px) {
+        .hello {
+            height: 150px;
+        }
+
+        .n1 {
+            font-size: 22px;
+            line-height: 26px;
+            font-weight: 600;
+            color: #30ACFF;
+        }
+
+        .raa {
+            padding-top: 0px;
+            padding: 35px 20px;
+        }
+
+        .ra1 {
+            font-size: 35px;
+            line-height: 42px;
+        }
+
+        .ra2 {
+            font-size: 13px;
+            line-height: 20px;
+            margin-top: 10px;
+        }
+
+        .nn {
+            padding: 25px;
+            margin-top: 30px;
+            margin-left: 15px;
+            margin-right: 15px;
+            box-shadow: 0 0 8px 8px #F2F2F2;
+        }
+
+        #yx {
+            margin-top: 20px;
+        }
+
+        .n3 {
+            width: 93%;
+            margin-right: 50px;
+        }
+
+        .n5 {
+
+            width: 93%;
+        }
+
+        .footer {
+            display: none;
+        }
+
+    }
+</style>
+
+<body>
+    <!-- ...............................................menu.......................................... -->
+    <div class="menu">
+        <div class="icon">
+            <!-- <i class="fa-solid fa-bars" id="menuicon" style="color: #5bcead;" id="logo"></i> -->
+            <img src="./img/freepik--20250620084532h9iu.png" class="menuicon" alt="">
+        </div>
+        <div class="logo">
+
+            <img src="./img/Adobe Express - file.png" alt="" class="bookimg">
+        </div>
+        <div class="other">
+            <a href="./HealthHub.html" class="ss">Home</a>
+            <!-- <a href="" class="ss">Doctors  <i class="fa-solid fa-chevron-down" style="color: #2e3642;"></i></a> -->
+            <div class="dropdown">
+                <a href="#" class="ss dropdown-toggle">Doctors <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="./Book-appointment.html">Book Appointment</a>
+                </div>
+            </div>
+            <a href="" class="ss">Hospitals</a>
+            <!-- <a href="" class="ss">Franchisee <i class="fa-solid fa-chevron-down" style="color: #2e3642;"></i></a> -->
+            <div class="dropdown">
+                <a href="#" class="ss dropdown-toggle">Franchisee <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="./Register.html">Register</a>
+                    <a href="./Sms-Booking.html">SMS Booking</a>
+                </div>
+            </div>
+            <a href="./Book-test.html" class="ss">Book Test</a>
+            <a href="./Surgery.html" class="ss">Surgery</a>
+            <a href="./Order-medicine.html" class="ss">Order Medicine</a>
+        </div>
+        <div class="bul">
+            <img src="./img/freepik-untitled-project-20250620140828Xg0p.png" class="hos" alt="">
+            <span class="con">Contact</span>
+            <span class="num">+91 943 520 0024</span>
+        </div>
+        <span class="login">
+            <button type="submit" class="b1"><a href="./Signin.html"><span>SIGN IN / SIGNUP</span></a></button>
+        </span>
+    </div>
+    <!-- .............................................register.......................................... -->
+    <div>
+        <div class="hello">
+            <div class="raa">
+                <p class="ra1">Order Medicine</p>
+                <p class="ra2">Only best quality Medicine here</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="ra">
+        <span class="r1"><a href="./copy.html" class="r2">HOME</a></span>
+        <i class="fa-solid fa-angle-right" style="color: #969696;" id="r3"></i>
+        <span class="r4">ORDER MEDICINE</span>
+    </div>
+    <hr class="raka">
+    <form action="" class="nn">
+        <p class="n1"> Order Best Quality Medicine</p>
+        <div class="nnn">
+            <p class="n4">Name</p>
+            <div>
+                <input type="text" class="n5" required>
+            </div>
+        </div>
+        <div class="nnn">
+            <p class="n4">Email (Optional)</p>
+            <div>
+                <input type="email" class="n5" required>
+            </div>
+        </div>
+        <div class="nnn">
+            <p class="n4">Phone</p>
+            <div>
+                <input type="tel" class="n5" required>
+            </div>
+        </div>
+        <div class="nnn">
+            <p class="n4">Address</p>
+            <div>
+                <input type="text" class="n5" required>
+            </div>
+        </div>
+        <div class="nnn">
+            <p class="n4">Name of Medicine</p>
+            <div>
+                <input type="text" class="n5" required>
+            </div>
+        </div>
+        <div class="nnn">
+            <p class="n4">Quantity</p>
+            <div>
+                <input type="number" class="n5" required>
+            </div>
+        </div>
+
+        <div class="nnnn">
+            <input type="checkbox"><span class="n6">I Agree To Terms & Conditions Of Quickobook</span>
+        </div>
+
+        <div>
+            <button type="submit" class="bol">Order Now</button>
+        </div>
+    </form>
+
+    <!-- ...............................................footer.......................................... -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section company-info">
+                    <div class="logo">
+                        <img src="./img/Adobe Express - file.png" class="ka" alt="">
+
+                    </div>
+                    <p class="company-description">
+                        HealthHub is a registered start up company empaneled with 10000+ Doctors, 500+ Hospitals, lives touched of more than 2 Million patients.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- For Information -->
+                <div class="footer-section">
+                    <h3>For Information</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Booking Guide</a></li>
+                        <li><a href="#">Pharmacy</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Release</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                    </ul>
+                </div>
+
+                <!-- Helpful Links -->
+                <div class="footer-section">
+                    <h3>Helpful Links</h3>
+                    <ul>
+                        <li><a href="./Book-appointment.html">Book Appointment</a></li>
+                        <li><a href="./Book-appointment.html">Search for doctors</a></li>
+                        <li><a href="">Search for hospitals</a></li>
+                        <li><a href="./Book-test.html">Book Lab/Diagnostics</a></li>
+                        <li><a href="./Register.html">Franchisee Register</a></li>
+                        <li><a href="./Rehister-2.html">SMS Booking</a></li>
+                        <li><a href="./Surgery.html">Surgery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="footer-section contact-info">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            QWKPRO CONSULTANCY PVT LTD,<br>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-text">+91 943 520 0024</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <div class="contact-label">Customer Support :</div>
+                            support@HealthHub.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <div class="contact-label">Official Queries :</div>
+                            info@HealthHub.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 HealthHub. All rights reserved.
+                </div>
+                <div class="footer-links">
+                    <a href="#">Terms and Conditions</a>
+                    <span>|</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+</body>
+
+</html>

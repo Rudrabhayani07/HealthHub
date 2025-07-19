@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./HealthHub.css">
+    <style>
+      
+      * {
+        padding: 0px;
+        margin: 0px;
+        font-family: Poppins, Helvetica, sans-serif;
+      }
+      /* ...............................................2.......................................... */
+      .Questionsmain {
+    background-color: #f6f8fa;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+      .area {
+    background-color: #f8f9fa;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+      .bookappointmentmain {
+        background-color: #f6f8fa;
+      }
+      .bookappointment {
+        display: flex;
+        max-width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      .bookappointmenti {
+        margin: 15px;
+        max-width: 50%;
+        display: flex;
+        padding: 15px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+      }
+      .bookappointmentiimg {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+        flex-shrink: 0;
+      }
+      .bookappointmentiimg > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+      .bookappointmentitext {
+        display: flex;
+        align-items: flex-start !important;
+        -webkit-box-align: start !important;
+      }
+      .bookappointmentitextdiv {
+        flex: 1;
+      }
+      .bookappointmentidiv1 {
+        font-family: -apple-system, "system-ui", "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+        font-size: 18px;
+        margin: 0 0 10px 0;
+        color: rgb(51, 51, 51);
+        margin: 0;
+      }
+      .bookappointmentidiv2 {
+        font-family: -apple-system, "system-ui", "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        font-size: 14px;
+        color: rgb(117, 117, 117);
+        margin-bottom: 8px;
+      }
+      .bookappointmentidiv3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+      .bookappointmentidiv3i {
+        background: #99a8ac;
+        color: #ffffff;
+        font-family: -apple-system, "system-ui", "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        font-style: normal;
+        font-weight: 700;
+        line-height: 21px;
+        font-size: 14px;
+      }
+      .bookappointmentidiv3ii {
+        font-weight: bolder;
+        color: rgb(117, 117, 117);
+        font-family: -apple-system, "system-ui", "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        font-style: normal;
+        font-weight: 700;
+        line-height: 21px;
+        font-size: 14px;
+      }
+      .bookappointmentidiv4 {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 5px;
+        margin-bottom: 8px;
+        font-size: 18px;
+        color: #ffcc00;
+      }
+      .bookappointmentidiv4 > i {
+        font-size: 0.8125rem;
+      }
+      .bookappointmentidiv4 > span {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .bookappointmentidiv5 {
+        font-size: 13px;
+        color: #ffffff;
+        margin-bottom: 8px;
+      }
+      .bookappointmentidiv5 > ul {
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        margin: 0 0 25px;
+        padding: 0;
+      }
+      .bookappointmentidiv5 > ul > li {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-radius: 4px;
+        margin-left: 0;
+        background: #1a7bd7;
+        transition: all 0.3s ease;
+        transform: translateZ(20px);
+        box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+        font-weight: 500;
+        min-width: 94px;
+        margin: 4px;
+        display: inline-block;
+        letter-spacing: 0.3px;
+      }
+      .bookappointmentidiv6 {
+        font-size: 13px;
+        color: #757575;
+        margin-bottom: 8px;
+      }
+      .bookappointmentitexta {
+        border: 1px solid #1a7bd7;
+        background: #1a7bd7;
+        padding: 8px;
+        border-radius: 4px;
+        color: #ffffff;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .bookappointmentitexta:hover {
+        border: 1px solid #1a7bd7;
+        padding: 8px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #386cf0;
+        transition: background 0.3s ease;
+      }
+      .bookappointmentitexta1 > {
+        text-decoration: none;
+        font-family: -apple-system, "system-ui", "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        color: rgb(255, 255, 255);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 21px;
+        font-size: 14px;
+      }
+      .bookappointmentitexta1 > :hover {
+        color: #386cf0;
+      }
+      .bookappointmentitexta1i {
+        width: 160px;
+      }
+      .Questionsi {
+        padding-top: 20px;
+        font-family: -apple-system, "system-ui", "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        font-style: normal;
+        font-weight: 700;
+        color: rgb(33, 37, 41);
+        font-size: 18px;
+        line-height: 22px;
+      }
+      .Questionsii1 {
+        text-align: left;
+        width: 90%;
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        font-family: -apple-system, "system-ui", "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        font-style: normal;
+        font-weight: 500;
+        color: rgb(40, 40, 41);
+        size: 16px;
+        line-height: 24px;
+      }
+      .Questionsmain {
+        background-color: #f6f8fa;
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      .Questionsii1 {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      .Questionsii11 {
+        margin-left: 20px;
+      }
+      .Questionsi {
+        padding-bottom: 20px;
+      }
+      .Questionsii11 > p {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-family: -apple-system, "system-ui", "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        font-style: normal;
+        font-weight: 500;
+        font-style: normal;
+        color: rgb(40, 40, 41);
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .Questionsii1:hover .Questionsii11 p {
+        color: rgb(20, 190, 240);
+      }
+      .Questionsii12 {
+        display: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        color: #444;
+        background: #f8f8f8;
+        border-top: 1px solid #ddd;
+      }
+      .Questionsii1.active .Questionsii12 {
+        display: block;
+        background-color: #f8f9fa;
+        border: none;
+      }
+      .Questionsii1 {
+        cursor: pointer;
+      }
+      .Questionsii11 p {
+        margin: 0;
+      }
+      .bookappointmentmain {
+        padding-bottom: 20px;
+        padding-top: 20px;
+      }
+      .area {
+        background-color: #f8f9fa;
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+      }
+
+      .area1 {
+        font-family: -apple-system, "system-ui", "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        font-style: normal;
+        font-weight: 500;
+        color: rgb(33, 37, 41);
+        padding: 35px 0 35px 5px;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+      }
+
+      .areatable {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .areatable tr td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+      }
+      .areatable tr td a {
+        text-decoration: none;
+        font-family: -apple-system, "system-ui", "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        font-style: normal;
+        font-weight: 400;
+        color: #386cf0;
+      }
+      .areatablemain td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+
+      .areatablemain1,
+      .areatablemain2,
+      .areatablemain3 {
+        font-family: -apple-system, "system-ui", "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+        font-style: normal;
+        font-weight: 700;
+        color: rgb(33, 37, 41);
+      }
+      .areatablemain2{
+        display: flex;
+        justify-content: center;
+      }
+      .footer {
+        background-color: #1f1f1f;
+        color: white;
+        padding: 60px 0 30px 0;
+        position: relative;
+        margin-top: 15px;
+      }
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 60px;
+        margin-bottom: 40px;
+      }
+      .company-info {
+        max-width: 300px;
+      }
+      .ka {
+        height: 140px;
+        width: 250px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+      .company-description {
+        color: #ffffff;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        font-size: 17px;
+      }
+      .social-icons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-icons a {
+        width: 35px;
+        height: 35px;
+        background-color: #404040;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+      }
+
+      .social-icons a:hover {
+        background-color: #027bff;
+        color: white;
+        transform: translateY(-2px);
+      }
+      .Questionsmain {
+    background-color: #f6f8fa;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+      .area {
+    background-color: #f8f9fa;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.areatablemain21
+{
+  display: flex;
+  justify-content: center;
+}
+      /* ...............................................1.......................................... */
+      @media (min-width: 320px) and (max-width: 480px) {
+        /* ...............................................1.......................................... */
+        .bookappointment {
+          display: block;
+          max-width: 90%;
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+        .bookappointmenti {
+          margin: 15px;
+          max-width: 90%;
+          display: block;
+        }
+        .bookappointmentitexta1i {
+          margin-top: 10px;
+          display: block;
+        }
+        .bookappointmentitext {
+          justify-items: center;
+          display: block;
+          align-items: flex-start !important;
+          -webkit-box-align: start !important;
+        }
+        .area {
+          background-color: #f8f9fa;
+          width: 100%;
+          padding-left: 7%;
+          padding-right: 7%;
+        }
+        .area1 {
+          padding: 4px;
+        }   
+      }
+      /* ...............................................2.......................................... */
+      @media (min-width: 481px) and (max-width: 767px) {
+        /* ...............................................1.......................................... */
+        .bookappointment {
+          display: block;
+          max-width: 90%;
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+        .bookappointmenti {
+          margin: 15px;
+          max-width: 90%;
+          display: block;
+        }
+        .bookappointmentitexta1i {
+          margin-top: 10px;
+          display: block;
+        }
+        .bookappointmentitext {
+          justify-items: center;
+          display: block;
+          align-items: flex-start !important;
+          -webkit-box-align: start !important;
+        }
+        .area {
+          background-color: #f8f9fa;
+          width: 200%;
+          padding-left: 7%;
+          padding-right: 7%;
+        }
+        .area1 {
+          padding: 4px;
+        }
+            .Questionsmain {
+    background-color: #f6f8fa;
+    width: 200%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.bookappointmentmain {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 200%;
+}
+.avu {
+    height: 550px;
+    background: linear-gradient(to bottom, #057efe 0%, #e0eefe 61%);
+    display: flex;
+    width: 200%;
+}
+.footer {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 60px 0 30px 0;
+    position: relative;
+    margin-top: 15px;
+    width: 200%;
+}
+    .bookappointmenti {
+        margin: 15px;
+        max-width: 100%;
+        display: flex;
+    }
+        .bookappointment {
+        display: block;
+        width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+      }
+      /* ...............................................3.......................................... */
+      @media (min-width: 768px) and (max-width: 1050px) {
+        .bookappointment {
+          display: block;
+          max-width: 90%;
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+        .bookappointmenti {
+          margin: 15px;
+          max-width: 90%;
+          display: block;
+        }
+        .bookappointmentitexta1i {
+          margin-top: 10px;
+          display: block;
+        }
+        .bookappointmentitext {
+          justify-items: center;
+          display: block;
+          align-items: flex-start !important;
+          -webkit-box-align: start !important;
+        }
+        .area {
+          background-color: #f8f9fa;
+          width: 120%;
+        }
+        .area1 {
+          padding: 4px;
+        }
+        .bookappointmenti {
+        display: flex;
+        max-width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .Questionsmain {
+    background-color: #f6f8fa;
+    width: 120%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.bookappointmentmain {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 120%;
+}
+.avu {
+    height: 550px;
+    background: linear-gradient(to bottom, #057efe 0%, #e0eefe 61%);
+    display: flex;
+    width: 120%;
+}
+.footer {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 60px 0 30px 0;
+    position: relative;
+    margin-top: 15px;
+    width: 120%;
+}
+      }
+      /* ...............................................4.......................................... */
+      @media (min-width: 1051px) and (max-width: 1230px) {
+        /* ...............................................1.......................................... */
+        .bookappointment {
+          display: flex;
+          max-width: 90%;
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+        .bookappointmentitexta1i {
+          margin-top: 10px;
+          display: block;
+        }
+        .bookappointmentitext {
+          display: block;
+          align-items: flex-start !important;
+          -webkit-box-align: start !important;
+        }
+        .bookappointment {
+          padding-top: 0px;
+          padding-bottom: 0px;
+        }
+      }
+      /* ...............................................5.......................................... */
+      @media (min-width: 1231px) and (max-width: 1430px) {
+        /* ...............................................1.......................................... */
+        .bookappointment {
+          display: flex;
+          max-width: 100%;
+          margin-left: 2%;
+          margin-right: 2%;
+        }
+      }
+      /* ...............................................6.......................................... */
+      @media (min-width: 1431px) {
+        /* ...............................................1.......................................... */
+        .heading {
+          padding-top: 20px;
+          width: 100%;
+          justify-content: space-around;
+        }
+        .imglogo {
+          width: 160px;
+        }
+        .fa-bars {
+          display: none;
+        }
+        .heading {
+          display: flex;
+          padding-top: 15px;
+          align-items: center;
+        }
+        
+      }
+    </style>
+</head>
+<body>
+    <!-- ...............................................1.......................................... -->
+       <div class="menu">
+        <div class="icon">
+            <!-- <i class="fa-solid fa-bars" id="menuicon" style="color: #5bcead;" id="logo"></i> -->
+            <img src="./img/freepik--20250620084532h9iu.png" class="menuicon"  alt="">
+        </div>
+        <div class="logo">
+
+            <img src="./img/Adobe Express - file.png" alt="" class="bookimg">
+        </div>
+        <div class="other">
+            <a href="./HealthHub.html" class="ss">Home</a>
+            <!-- <a href="" class="ss">Doctors  <i class="fa-solid fa-chevron-down" style="color: #2e3642;"></i></a> -->    
+            <div class="dropdown">
+                <a href="#" class="ss dropdown-toggle">Doctors <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                  <a href="./Book-appointment.html">Book Appointment</a>
+                </div>
+              </div> 
+            <a href="" class="ss">Hospitals</a>
+            <!-- <a href="" class="ss">Franchisee <i class="fa-solid fa-chevron-down" style="color: #2e3642;"></i></a> -->
+             <div class="dropdown">
+                <a href="#" class="ss dropdown-toggle">Franchisee <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="./Register.html">Register</a>
+                    <a href="./Sms-Booking.html">SMS Booking</a>
+                </div>
+            </div>
+            <a href="./Book-test.html" class="ss">Book Test</a>
+            <a href="./Surgery.html" class="ss">Surgery</a>
+            <a href="./Order-medicine.html" class="ss">Order Medicine</a>
+        </div>
+        <div class="bul">
+            <img src="./img/freepik-untitled-project-20250620140828Xg0p.png" class="hos" alt="">
+            <span class="con">Contact</span>
+            <span class="num">+91 943 520 0024</span>
+        </div>
+        <span class="login">
+            <button type="submit" class="b1"><a href="./Signin.html"><span>SIGN IN / SIGNUP</span></a></button>
+        </span>
+    </div>
+    <!-- ...............................................2.......................................... -->
+    <div class="bookappointmentmain">
+      <div class="bookappointment">
+        <div class="bookappointmenti">
+          <div class="bookappointmentiimg">
+            <img
+              src="https://www.quickobook.com/uploads/profiles/default_avatar.png"
+              alt=""
+            />
+          </div>
+          <div class="bookappointmentitext">
+            <div class="bookappointmentitextdiv">
+              <h4 class="bookappointmentidiv1">Dr. P. C. Sarma</h4>
+              <p class="bookappointmentidiv2">Cardiologist</p>
+              <p class="bookappointmentidiv3">
+                <span class="bookappointmentidiv3i">Consult for: </span>
+                <span class="bookappointmentidiv3ii"
+                  >Chest Pain, Breathlessness, Fatigue, Irregular Heartbeat,
+                  Swelling, Dizziness, Palpitations</span
+                >
+              </p>
+              <div class="bookappointmentidiv4">
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <span>(4.61 ratings)</span>
+              </div>
+              <div class="bookappointmentidiv5">
+                <ul>
+                  <li>350060 Views</li>
+                  <li>26866 Patients</li>
+                </ul>
+              </div>
+              <div class="bookappointmentidiv6">
+                25 Years Experience Overall
+              </div>
+            </div>
+            <div class="bookappointmentitexta1i">
+              <a href="#" class="bookappointmentitexta1">
+                <button class="bookappointmentitexta">Book Appointment</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bookappointmenti">
+          <div class="bookappointmentiimg">
+            <img
+              src="https://www.quickobook.com/uploads/profiles/default_avatar.png"
+              alt=""
+            />
+          </div>
+          <div class="bookappointmentitext">
+            <div class="bookappointmentitextdiv">
+              <h4 class="bookappointmentidiv1">Dr. Abhishek Chakraborty</h4>
+              <p class="bookappointmentidiv2">Cardiologist</p>
+              <p class="bookappointmentidiv3">
+                <span class="bookappointmentidiv3i">Consult for: </span>
+                <span class="bookappointmentidiv3ii"
+                  >Chest Pain, Breathlessness, Fatigue, Irregular Heartbeat,
+                  Swelling, Dizziness, Palpitations</span
+                >
+              </p>
+              <div class="bookappointmentidiv4">
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <span>(4.61 ratings)</span>
+              </div>
+              <div class="bookappointmentidiv5">
+                <ul>
+                  <li>350060 Views</li>
+                  <li>26866 Patients</li>
+                </ul>
+              </div>
+              <div class="bookappointmentidiv6">
+                15 Years Experience Overall
+              </div>
+            </div>
+            <div class="bookappointmentitexta1i">
+              <a href="#" class="bookappointmentitexta1">
+                <button class="bookappointmentitexta">Book Appointment</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bookappointment">
+        <div class="bookappointmenti">
+          <div class="bookappointmentiimg">
+            <img
+              src="https://www.quickobook.com/uploads/profiles/default_avatar.png"
+              alt=""
+            />
+          </div>
+          <div class="bookappointmentitext">
+            <div class="bookappointmentitextdiv">
+              <h4 class="bookappointmentidiv1">Dr. Anjan Paul</h4>
+              <p class="bookappointmentidiv2">Cardiologist</p>
+              <p class="bookappointmentidiv3">
+                <span class="bookappointmentidiv3i">Consult for: </span>
+                <span class="bookappointmentidiv3ii"
+                  >Chest Pain, Breathlessness, Fatigue, Irregular Heartbeat,
+                  Swelling, Dizziness, Palpitations</span
+                >
+              </p>
+              <div class="bookappointmentidiv4">
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <span>(4.61 ratings)</span>
+              </div>
+              <div class="bookappointmentidiv5">
+                <ul>
+                  <li>350060 Views</li>
+                  <li>26866 Patients</li>
+                </ul>
+              </div>
+              <div class="bookappointmentidiv6">
+                20 Years Experience Overall
+              </div>
+            </div>
+            <div class="bookappointmentitexta1i">
+              <a href="#" class="bookappointmentitexta1">
+                <button class="bookappointmentitexta">Book Appointment</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bookappointmenti">
+          <div class="bookappointmentiimg">
+            <img
+              src="https://www.quickobook.com/uploads/profiles/default_avatar.png"
+              alt=""
+            />
+          </div>
+          <div class="bookappointmentitext">
+            <div class="bookappointmentitextdiv">
+              <h4 class="bookappointmentidiv1">Dr. Sitangshu Dam</h4>
+              <p class="bookappointmentidiv2">Cardiologist</p>
+              <p class="bookappointmentidiv3">
+                <span class="bookappointmentidiv3i">Consult for: </span>
+                <span class="bookappointmentidiv3ii"
+                  >Chest Pain, Breathlessness, Fatigue, Irregular Heartbeat,
+                  Swelling, Dizziness, Palpitations</span
+                >
+              </p>
+              <div class="bookappointmentidiv4">
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <span>(4.61 ratings)</span>
+              </div>
+              <div class="bookappointmentidiv5">
+                <ul>
+                  <li>350060 Views</li>
+                  <li>26866 Patients</li>
+                </ul>
+              </div>
+              <div class="bookappointmentidiv6">
+                30 Years Experience Overall
+              </div>
+            </div>
+            <div class="bookappointmentitexta1i">
+              <a href="#" class="bookappointmentitexta1">
+                <button class="bookappointmentitexta">Book Appointment</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bookappointment">
+        <div class="bookappointmenti">
+          <div class="bookappointmentiimg">
+            <img
+              src="https://www.quickobook.com/uploads/profiles/default_avatar.png"
+              alt=""
+            />
+          </div>
+          <div class="bookappointmentitext">
+            <div class="bookappointmentitextdiv">
+              <h4 class="bookappointmentidiv1">Dr. Sanjib Kumar Debnath</h4>
+              <p class="bookappointmentidiv2">Cardiologist</p>
+              <p class="bookappointmentidiv3">
+                <span class="bookappointmentidiv3i">Consult for: </span>
+                <span class="bookappointmentidiv3ii"
+                  >Chest Pain, Breathlessness, Fatigue, Irregular Heartbeat,
+                  Swelling, Dizziness, Palpitations</span
+                >
+              </p>
+              <div class="bookappointmentidiv4">
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <span>(4.61 ratings)</span>
+              </div>
+              <div class="bookappointmentidiv5">
+                <ul>
+                  <li>350060 Views</li>
+                  <li>26866 Patients</li>
+                </ul>
+              </div>
+              <div class="bookappointmentidiv6">
+                16 Years Experience Overall
+              </div>
+            </div>
+            <div class="bookappointmentitexta1i">
+              <a href="#" class="bookappointmentitexta1">
+                <button class="bookappointmentitexta">Book Appointment</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bookappointmenti">
+          <div class="bookappointmentiimg">
+            <img
+              src="https://www.quickobook.com/uploads/profiles/default_avatar.png"
+              alt=""
+            />
+          </div>
+          <div class="bookappointmentitext">
+            <div class="bookappointmentitextdiv">
+              <h4 class="bookappointmentidiv1">Dr. S. K. Roy</h4>
+              <p class="bookappointmentidiv2">Cardiologist</p>
+              <p class="bookappointmentidiv3">
+                <span class="bookappointmentidiv3i">Consult for: </span>
+                <span class="bookappointmentidiv3ii"
+                  >Chest Pain, Breathlessness, Fatigue, Irregular Heartbeat,
+                  Swelling, Dizziness, Palpitations</span
+                >
+              </p>
+              <div class="bookappointmentidiv4">
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <span>(4.61 ratings)</span>
+              </div>
+              <div class="bookappointmentidiv5">
+                <ul>
+                  <li>350060 Views</li>
+                  <li>26866 Patients</li>
+                </ul>
+              </div>
+              <div class="bookappointmentidiv6">
+                25 Years Experience Overall
+              </div>
+            </div>
+            <div class="bookappointmentitexta1i">
+              <a href="#" class="bookappointmentitexta1">
+                <button class="bookappointmentitexta">Book Appointment</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bookappointment">
+        <div class="bookappointmenti">
+          <div class="bookappointmentiimg">
+            <img
+              src="https://www.quickobook.com/uploads/profiles/default_avatar.png"
+              alt=""
+            />
+          </div>
+          <div class="bookappointmentitext">
+            <div class="bookappointmentitextdiv">
+              <h4 class="bookappointmentidiv1">Dr. Khaleed Ahmed Khan</h4>
+              <p class="bookappointmentidiv2">Cardiologist</p>
+              <p class="bookappointmentidiv3">
+                <span class="bookappointmentidiv3i">Consult for: </span>
+                <span class="bookappointmentidiv3ii"
+                  >Chest Pain, Breathlessness, Fatigue, Irregular Heartbeat,
+                  Swelling, Dizziness, Palpitations</span
+                >
+              </p>
+              <div class="bookappointmentidiv4">
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <span>(4.61 ratings)</span>
+              </div>
+              <div class="bookappointmentidiv5">
+                <ul>
+                  <li>350060 Views</li>
+                  <li>26866 Patients</li>
+                </ul>
+              </div>
+              <div class="bookappointmentidiv6">
+                8 Years Experience Overall
+              </div>
+            </div>
+            <div class="bookappointmentitexta1i">
+              <a href="#" class="bookappointmentitexta1">
+                <button class="bookappointmentitexta">Book Appointment</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bookappointmenti">
+          <div class="bookappointmentiimg">
+            <img
+              src="https://www.quickobook.com/uploads/profiles/default_avatar.png"
+              alt=""
+            />
+          </div>
+          <div class="bookappointmentitext">
+            <div class="bookappointmentitextdiv">
+              <h4 class="bookappointmentidiv1">Dr. Somrita Chakraborty</h4>
+              <p class="bookappointmentidiv2">Cardiologist</p>
+              <p class="bookappointmentidiv3">
+                <span class="bookappointmentidiv3i">Consult for: </span>
+                <span class="bookappointmentidiv3ii"
+                  >Chest Pain, Breathlessness, Fatigue, Irregular Heartbeat,
+                  Swelling, Dizziness, Palpitations</span
+                >
+              </p>
+              <div class="bookappointmentidiv4">
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <span>(4.61 ratings)</span>
+              </div>
+              <div class="bookappointmentidiv5">
+                <ul>
+                  <li>350060 Views</li>
+                  <li>26866 Patients</li>
+                </ul>
+              </div>
+              <div class="bookappointmentidiv6">
+                10 Years Experience Overall
+              </div>
+            </div>
+            <div class="bookappointmentitexta1i">
+              <a href="#" class="bookappointmentitexta1">
+                <button class="bookappointmentitexta">Book Appointment</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bookappointment">
+        <div class="bookappointmenti">
+          <div class="bookappointmentiimg">
+            <img
+              src="https://www.quickobook.com/uploads/profiles/default_avatar.png"
+              alt=""
+            />
+          </div>
+          <div class="bookappointmentitext">
+            <div class="bookappointmentitextdiv">
+              <h4 class="bookappointmentidiv1">Dr. Afsal K. M</h4>
+              <p class="bookappointmentidiv2">Cardiologist</p>
+              <p class="bookappointmentidiv3">
+                <span class="bookappointmentidiv3i">Consult for: </span>
+                <span class="bookappointmentidiv3ii"
+                  >Chest Pain, Breathlessness, Fatigue, Irregular Heartbeat,
+                  Swelling, Dizziness, Palpitations</span
+                >
+              </p>
+              <div class="bookappointmentidiv4">
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <span>(4.61 ratings)</span>
+              </div>
+              <div class="bookappointmentidiv5">
+                <ul>
+                  <li>350060 Views</li>
+                  <li>26866 Patients</li>
+                </ul>
+              </div>
+              <div class="bookappointmentidiv6">
+                5 Years Experience Overall
+              </div>
+            </div>
+            <div class="bookappointmentitexta1i">
+              <a href="#" class="bookappointmentitexta1">
+                <button class="bookappointmentitexta">Book Appointment</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bookappointmenti">
+          <div class="bookappointmentiimg">
+            <img
+              src="https://www.quickobook.com/uploads/profiles/default_avatar.png"
+              alt=""
+            />
+          </div>
+          <div class="bookappointmentitext">
+            <div class="bookappointmentitextdiv">
+              <h4 class="bookappointmentidiv1">Dr. H. Reheman</h4>
+              <p class="bookappointmentidiv2">Cardiologist</p>
+              <p class="bookappointmentidiv3">
+                <span class="bookappointmentidiv3i">Consult for: </span>
+                <span class="bookappointmentidiv3ii"
+                  >Chest Pain, Breathlessness, Fatigue, Irregular Heartbeat,
+                  Swelling, Dizziness, Palpitations</span
+                >
+              </p>
+              <div class="bookappointmentidiv4">
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <i class="fa-solid fa-star" style="color: #ffcc02"></i>
+                <span>(4.61 ratings)</span>
+              </div>
+              <div class="bookappointmentidiv5">
+                <ul>
+                  <li>350060 Views</li>
+                  <li>26866 Patients</li>
+                </ul>
+              </div>
+              <div class="bookappointmentidiv6">
+                12 Years Experience Overall
+              </div>
+            </div>
+            <div class="bookappointmentitexta1i">
+              <a href="#" class="bookappointmentitexta1">
+                <button class="bookappointmentitexta">Book Appointment</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ...............................................4.......................................... -->
+    <div class="area">
+      <div class="area1">Best Doctors in Your Area</div>
+      <table class="areatable">
+        <tr class="areatablemain">
+          <td class="areatablemain1">Doctor's Name</td>
+          <td class="areatablemain2">Clinic Fees</td>
+          <td class="areatablemain3">Quickobook Ratings</td>
+        </tr>
+        <tr>
+          <td><a href="#">Dr. P. C. Sarma</a></td>
+          <td class="areatablemain21">₹500.00</td>
+          <td>4.6</td>
+        </tr>
+        <tr>
+          <td><a href="">Dr. Abhishek Chakraborty</a></td>
+          <td class="areatablemain21">₹500.00</td>
+          <td>4.8</td>
+        </tr>
+        <tr>
+          <td><a href="">Dr. Anjan Paul</a></td>
+          <td class="areatablemain21">₹500.00</td>
+          <td>4.8</td>
+        </tr>
+        <tr>
+          <td><a href="">Dr. Sitangshu Dam</a></td>
+          <td class="areatablemain21">₹500.00</td>
+          <td>4.7</td>
+        </tr>
+        <tr>
+          <td><a href="">Dr. Sanjib Kumar Debnath</a></td>
+          <td class="areatablemain21">₹500.00</td>
+          <td>4.6</td>
+        </tr>
+        <tr>
+          <td><a href="">Dr. S. K. Roy</a></td>
+          <td class="areatablemain21">₹500.00</td>
+          <td>4.6</td>
+        </tr>
+        <tr>
+          <td><a href="">Dr. Khaleed Ahmed Khan</a></td>
+          <td class="areatablemain21">₹500.00</td>
+          <td>5.0</td>
+        </tr>
+        <tr>
+          <td><a href="">Dr. Somrita Chakraborty</a></td>
+          <td class="areatablemain21">₹500.00</td>
+          <td>5.0</td>
+        </tr>
+        <tr>
+          <td><a href="">Dr. Afsal K. M</a></td>
+          <td class="areatablemain21">₹500.00</td>
+          <td>5.0</td>
+        </tr>
+        <tr>
+          <td><a href="">Dr. H. Reheman</a></td>
+          <td class="areatablemain21">₹500.00</td>
+          <td>5.0</td>
+        </tr>
+      </table>
+    </div>   
+      <!-- ..............................................ad.......................................... -->
+    <div class="avu">
+        <div class="s1">
+            <p class="j1" id="jj1">Get all your medicines.</p>
+            <p class="j1" id="jj2">Everytime. On time.</p>
+            <p class="m1" id="mm1">Guaranteed availability</p>
+            <p class="m1" id="mm2">Home delivery in 24hrs</p>
+            <a href="./Order-medicine.html" class="o"><button type="submit" class="as">Order Medicins</button></a>
+        </div>
+        <div class="s2">
+            <img src="https://www.quickobook.com/assets/img/order.svg" class="ss2  bhau ba eoisea bhani i" alt="">
+        </div>
+    </div>
+    <!-- .............................................6.......................................... -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section company-info">
+                    <div class="logo">
+                        <img src="./img/Adobe Express - file.png" class="ka" alt="">
+
+                    </div>
+                    <p class="company-description">
+                        HealthHub is a registered start up company empaneled with 10000+ Doctors, 500+ Hospitals, lives touched of more than 2 Million patients.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- For Information -->
+                <div class="footer-section">
+                    <h3>For Information</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Booking Guide</a></li>
+                        <li><a href="#">Pharmacy</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Release</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                    </ul>
+                </div>
+
+                <!-- Helpful Links -->
+                <div class="footer-section">
+                    <h3>Helpful Links</h3>
+                    <ul>
+                        <li><a href="./Book-appointment.html">Book Appointment</a></li>
+                        <li><a href="./Book-appointment.html">Search for doctors</a></li>
+                        <li><a href="">Search for hospitals</a></li>
+                        <li><a href="./Book-test.html">Book Lab/Diagnostics</a></li>
+                        <li><a href="./Register.html">Franchisee Register</a></li>
+                        <li><a href="./Rehister-2.html">SMS Booking</a></li>
+                        <li><a href="./Surgery.html">Surgery</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="footer-section contact-info">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            QWKPRO CONSULTANCY PVT LTD,<br>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-text">+91 943 520 0024</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <div class="contact-label">Customer Support :</div>
+                            support@HealthHub.com
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-text">
+                            <div class="contact-label">Official Queries :</div>
+                            info@HealthHub.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 HealthHub. All rights reserved.
+                </div>
+                <div class="footer-links">
+                    <a href="#">Terms and Conditions</a>
+                    <span>|</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
